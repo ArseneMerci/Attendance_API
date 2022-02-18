@@ -21,7 +21,7 @@ const sendEmail = async (userInfo,action) =>{
       template = './dailyReport.ejs';
       subject = 'Daily Report';
       data = `<a href="https://attendence-solvit.herokuapp.com/attendence/downloadReport">Download Report</a>`
-      emailto = 'niyodusengamussa@gmail.com';
+      emailto = 'arseneich@gmail.com';
       break;
     case 'forgotPassword':
       template = './forgotPassword.ejs';
