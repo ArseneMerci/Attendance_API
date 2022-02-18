@@ -1,5 +1,5 @@
 import jwt from "jsonwebtoken";
-import User from "../models/userModel";
+import User from "../database/models/userModel";
 require("dotenv").config();
 
 const adminAuth=async (req,res,next)=>{

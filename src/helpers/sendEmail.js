@@ -14,7 +14,7 @@ const sendEmail = async (userInfo,action) =>{
     case 'signup':
       template = './signUp.ejs';
       subject = 'Welcome to Attendence Management System';
-      data = `<p>Dear User, your info are, email: ${userInfo.email} Password:${userInfo.password}</p>`
+      data = `<p>Dear User, your info are, email: ${userInfo.email} Password:${userInfo.unHashedPassword}</p>`
       emailto = userInfo.email;
       break;
     case 'report':

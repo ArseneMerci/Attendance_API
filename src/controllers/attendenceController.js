@@ -1,7 +1,7 @@
 import jwt from 'jsonwebtoken'
-import Attendence from '../models/attendenceModel'
+import Attendence from '../database/models/attendenceModel'
 require("dotenv").config();
-import {checkDate} from '../services/calculateHours'
+import {checkDate} from '../helpers/calculateHours'
 import cron from 'node-cron'
 import excel from "exceljs";
 

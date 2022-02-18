@@ -1,11 +1,11 @@
 import jwt from 'jsonwebtoken'
 import bcrypt from "bcryptjs";
-import User from '../models/userModel'
-import Attendence from '../models/attendenceModel'
+import User from '../database/models/userModel'
+import Attendence from '../database/models/attendenceModel'
 require("dotenv").config();
-import checkLocation from '../services/checkLocation'
-import {calculateHours} from '../services/calculateHours'
-import sendEmail from '../services/sendEmail';
+import checkLocation from '../helpers/checkLocation'
+import {calculateHours} from '../helpers/calculateHours'
+import sendEmail from '../helpers/sendEmail';
 
 exports.verifyUserLocation=async(req,res)=>{
     const {latitude,longitude}=req.body

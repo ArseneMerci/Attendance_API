@@ -1,5 +1,5 @@
 import cron from 'node-cron'
-import sendEmail from '../services/sendEmail'
+import sendEmail from '../helpers/sendEmail'
 
 export default ()=>{
   cron.schedule("*/5 * * * *",()=>{

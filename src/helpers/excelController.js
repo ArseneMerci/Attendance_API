@@ -4,8 +4,8 @@ import mongoose from 'mongoose'
 import moment from 'moment'
 require('dotenv').config()
 import sgMail from '@sendgrid/mail'
-import Attendence from '../models/attendenceModel'
-import sendEmail from '../services/sendEmail'
+import Attendence from '../database/models/attendenceModel'
+import sendEmail from '../helpers/sendEmail'
 
 import excel from 'exceljs';
 const download =async (req,res) => {

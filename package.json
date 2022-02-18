@@ -1,7 +1,8 @@
 {
-  "name": "attend",
+  "name": "attendance-system",
   "version": "1.0.0",
-  "description": "A tool that allows companies to manage sign in and out of the office. (Nodejs)",
+  "description": "An attendance management system for companies. (Nodejs)",
+  "author": "ArseneMerci",
   "main": "server.js",
   "engines": {
     "node": "16.13.1"
@@ -15,14 +16,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/solvit-dsaa-training/Attend.git"
+    "url": "git+https://github.com/ArseneMerci/Attendance_API.git"
   },
-  "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/solvit-dsaa-training/Attend/issues"
+    "url": "https://github.com/ArseneMerci/Attendance_API/issues"
   },
-  "homepage": "https://github.com/solvit-dsaa-training/Attend#readme",
+  "homepage": "https://github.com/ArseneMerci/Attendance_API#readme",
   "dependencies": {
     "@babel/cli": "^7.17.0",
     "@babel/core": "^7.17.0",
@@ -30,6 +30,7 @@
     "@babel/register": "^7.17.0",
     "@babel/runtime": "^7.17.0",
     "@sendgrid/mail": "^7.6.0",
+    "bcrypt": "^5.0.1",
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.19.1",
     "cors": "^2.8.5",
