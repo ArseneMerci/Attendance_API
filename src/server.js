@@ -3,7 +3,7 @@ import bodyParser from "body-parser";
 import connectDb from './database/dbconnection';
 import cors from "cors";
 import routes from './routers/index';
-import dailyReportCron from './services/dailyCron'
+import dailyReportCron from './helpers/dailyCron'
 
 const app = express();
 connectDb(); 
@@ -19,7 +19,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 // dailyReportCron()
 app.use('/api', routes);
 app.get("/",(req, res) => {
-  res.send("Hello World");
+  res.send("This is the API for attendence management system");
 });  
 const PORT = process.env.PORT || 4500;
 

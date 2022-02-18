@@ -1,4 +1,4 @@
-import AllowedLocations from '../models/allowedLocations'
+import AllowedLocations from '../database/models/allowedLocations'
 import { 
     toLatLon,  insideCircle
   } from 'geolocation-utils'

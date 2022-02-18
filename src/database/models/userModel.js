@@ -53,17 +53,17 @@ const userSchema = new mongoose.Schema({
   },
 });
 //generating auth token
-userSchema.methods.generateAuthToken = async function (attendence_id) {
-  const user = this; 
-  const attend_id = attendence_id.toString();
-  const token = jwt.sign(
-    { _id: user._id.toString(), role: user.role , attendence_id:attend_id},
-    process.env.SECRET_KEY
-  );
-  user.token = token
-  await user.save();
-  return token;
-};
+// userSchema.methods.generateAuthToken = async function (attendence_id) {
+//   const user = this; 
+//   const attend_id = attendence_id.toString();
+//   const token = jwt.sign(
+//     { _id: user._id.toString(), role: user.role , attendence_id:attend_id},
+//     process.env.SECRET_KEY
+//   );
+//   user.token = token
+//   await user.save();
+//   return token;
+// };
 //find if email and password are exists
 // userSchema.statics.findByCredentials = async (email, password,res) => {
 //   const user = await User.findOne({ email });
@@ -77,13 +77,11 @@ userSchema.methods.generateAuthToken = async function (attendence_id) {
 //   return user;
 // };
 //hash the plain text password
-userSchema.pre("save", async function (next) {
-  const user = this;
-  if (user.isModified("password")) {
-    user.password = await bcrypt.hash(user.password, 8);
-  }
-  next();
-});
-
-const User = mongoose.model("user", userSchema);
-module.exports = User;
+// userSchema.pre("save", async function (next) {
+//   const user = this;
+//   if (user.isModified("password")) {
+//     user.password = await bcrypt.hash(user.password, 8);
+//   }
+//   next();
+// });
+export default mongoose.model("User", userSchema);

@@ -1,9 +1,10 @@
-import express from 'express';
+import {Router} from 'express';
 import {adminAuth} from '../middlewares/auth';
 import adminController from '../controllers/adminController';
 import userController from '../controllers/userController';
-const router = express.Router();
+const router = Router();
 
+// router.post('/signup', adminController.createUser);
 router.post('/signup', adminAuth, adminController.createUser);
 router.post('/logout', adminAuth, userController.logout);
 router.post('/location/add', adminAuth, adminController.createLocation);
