@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Daily Report</title>
+  <style>
+    body {
+      background: #f2f2f2;
+    }
+
+    section {
+      font-family: proxima-nova, sans-serif;
+      margin: auto;
+      width: 60%;
+    }
+
+    .small_text {
+      font-size: 16px;
+      margin-top: 30px;
+      color: #424242;
+    }
+
+    .body_par {
+      color: #333;
+    }
+
+    .login_body li {
+      list-style: none;
+    }
+
+    .login_body li {
+      color: #333;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    .footer_text {
+      font-size: 15px;
+      margin-top: 20px;
+      color: #333;
+    }
+
+    footer {
+      margin-top: 35px;
+      color: #222;
+      font-size: 15px;
+      margin-bottom: 25px;
+    }
+
+    footer p {
+      line-height: 1.7;
+    }
+
+    .logo_img {
+      width: 350px;
+      height: 200px;
+    }
+    .logo_div {
+      margin: auto;
+    }
+    
+
+    .verify_button {
+      background-color:  #ffc107;
+      color: #ffffff;
+      padding: 5px 20px;
+      font-size: 16px;
+      border-radius: 10px;
+      font-weight: bold;
+      text-transform: capitalize;
+      text-align: center;
+    }
+
+    @media screen and (max-width: 812px) {
+      section {
+        width: 95%;
+      }
+
+      .small_text {
+        font-size: 14px;
+        margin-top: 40px;
+      }
+
+      .footer_text {
+        font-size: 13px;
+      }
+
+      .tuner_logo {
+        height: 280px;
+      }
+
+      .tuner_logo img {
+        margin-top: 70px;
+        width: 200px;
+      }
+
+    }
+  </style>
+</head>
+
+<body>
+  <section>
+    <h2>Daily Report</h2>
+    <div class="small_text">
+      <div class="logo_div">
+        <img src="https://findlogovector.com/wp-content/uploads/2018/12/attend-logo-vector.png" alt="logo" class="logo_img" />
+      </div>
+      <p>
+        <strong>Dear Admin,</strong>
+      </p>
+    </div>
+    <div class="body_par">
+      <p>
+        This is the report for <b>Today's</b> Attendence. 
+      </p>
+    </div>
+        <h2 style="font-size: 15px;">Get the report by clicking the Link bellow</h2>
+        <a class="verify_button" href="https://attendence-solvit.herokuapp.com/api/attendence/downloadReport">Download Report</a>
+    <p class="footer_text">
+      If you encounter any problem, please don't hesitate to CONTACT US at
+      <span style="color:#424242"><a href="mailto:niyodusengamussa@gmail.com">niyodusengamussa@gmail.com</a></span>
+    </p>
+    <footer>
+      <p>
+        <span>Kigali, Rwanda</span><br />
+      </p>
+      &copy; Attend - All Rights Reserved.
+    </footer>
+  </section>
+</body>
+
+</html>

@@ -1,0 +1,56 @@
+{
+  "name": "attend",
+  "version": "1.0.0",
+  "description": "A tool that allows companies to manage sign in and out of the office. (Nodejs)",
+  "main": "server.js",
+  "engines": {
+    "node": "16.13.1"
+  },
+  "scripts": {
+    "dev": "nodemon --exec babel-node ./src/server.js",
+    "clean": "rm -rf build && mkdir build",
+    "build-babel": "babel -d ./build ./server.js -s",
+    "build": "babel src --out-dir dist",
+    "start": "node --require @babel/polyfill dist/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/solvit-dsaa-training/Attend.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/solvit-dsaa-training/Attend/issues"
+  },
+  "homepage": "https://github.com/solvit-dsaa-training/Attend#readme",
+  "dependencies": {
+    "@babel/cli": "^7.17.0",
+    "@babel/core": "^7.17.0",
+    "@babel/polyfill": "^7.12.1",
+    "@babel/register": "^7.17.0",
+    "@babel/runtime": "^7.17.0",
+    "@sendgrid/mail": "^7.6.0",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.1",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "ejs": "^3.1.6",
+    "exceljs": "^4.3.0",
+    "express": "^4.17.2",
+    "geolocation-utils": "^1.2.5",
+    "jsonwebtoken": "^8.5.1",
+    "lodash": "^4.17.21",
+    "mongodb": "^4.3.0",
+    "mongoose": "^6.1.5",
+    "node-cron": "^3.0.0",
+    "unirest": "^0.6.0",
+    "validator": "^13.7.0"
+  },
+  "devDependencies": {
+    "@babel/node": "^7.16.8",
+    "@babel/plugin-transform-runtime": "^7.17.0",
+    "@babel/preset-env": "^7.16.11",
+    "network": "^0.6.1",
+    "nodemon": "^2.0.15"
+  }
+}
